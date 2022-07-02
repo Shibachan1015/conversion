@@ -2,27 +2,15 @@
 // °C = ((°F) -32) ÷ 1.8
 // °F = °C × 1.8 + 32
 
-    // 最終目標　println!("摂氏と華氏双方向に温度を変換できます。"); 現状双方向ではない。
-    // exit()などで正常終了を実装したい。 yet
-    // 次は華氏から摂氏に変換を実装する。 ok
-    // |idea| if or match で　摂氏から華氏か華氏から摂氏を判定してそこでctof関数かftocを呼びだせば良いのではないか。 matchでの実装ができなかったためifでお茶を濁した。
-    /*   print(choice c=1 or choice f=2)
-         | |---if choice c(){};
-         |      |---
-         |
-         |---if choice f(){};
-    */
+// 最終目標　println!("摂氏と華氏双方向に温度を変換できます。"); 現状双方向ではない。
+// exit()などで正常終了を実装したい。 yet
+// matchでの実装ができなかったためifでお茶を濁した。
 
 mod my_calc;  // calc_ctofなどの関数のモジュール
 use std::io;
 
 fn main() {
 
-    // ｃからf（１）の場合
-    // let convert1 = convert_ctof_1();
-    // ｆからｃ（２）の場合
-    // let convert2 = convert_ftoc_2();
-    
     let disp_info = 
         "\n
         +-------------------------------------------------+\n
@@ -51,25 +39,18 @@ fn main() {
         println!("{}を受け付けました。\n", &c_or_f);
         
         if c_or_f == 1 {
-            convert_ctof_1();
+            convert_1();
         } else if c_or_f == 2 {
-            convert_ftoc_2();
+            convert_2();
         } else {
             break;
         } 
 
-        /*
-        match c_or_f {
-            1 => convert1,
-            2 => convert2,
-            _ => continue
-        } 
-        */
     }
 
 }
 /*---------------------------------------------------------------------------*/
-fn convert_ctof_1 () {
+fn convert_1 () {
     println!("摂氏を華氏に変換します。\n");
 
     loop {
@@ -92,7 +73,7 @@ fn convert_ctof_1 () {
     }
 }
 
-fn convert_ftoc_2 () {
+fn convert_2 () {
     println!("華氏を摂氏に変換します。");
 
     loop {
