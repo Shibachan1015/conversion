@@ -4,14 +4,13 @@
 
 // 最終目標　println!("摂氏と華氏双方向に温度を変換できます。"); 現状双方向ではない。
 // 正常終了を実装したい。use std::process::exit();
-// matchでの実装ができなかったためifでお茶を濁した。
 // 初期画面から０を入力で終了できるようにはなった。各関数へ移行したあとはまだ。
 
 use std::process;
-mod my_calc; // calc_ctofなどの関数のモジュール
 use std::io;
+mod my_calc; // calc_ctofなどの関数のモジュール
 
-pub fn main() {
+fn main() {
     main_loop();
 }
 
@@ -62,7 +61,7 @@ fn first_call() {
         +-------------------------------------------------+\n
         ";
 
-    println!("摂氏を華氏、または華氏を摂氏に変換します。\n");
+    println!("\n\n          摂氏を華氏、または華氏を摂氏に変換します。\n");
     println!("{}", disp_info);
 }
 
