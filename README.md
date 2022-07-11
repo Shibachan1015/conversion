@@ -15,4 +15,7 @@ What I focus on
   - Implement normal termination.  
   - To be able to select Celsius←→Fahrenheit or normal termination at any time.  
 
-https://replit.com/@siba1015/conversion-1#src/main.rs
+https://replit.com/@siba1015/conversion-1#src/main.rs  
+
+ご意見やレビューお待ちしてます。  
+I welcome your comments and reviews!!  
