@@ -65,12 +65,12 @@ fn convert_1() {
             .read_line(&mut current_temperature)
             .expect("行の読み込みに失敗しました。");
 
-        let current_temperature: f64 = match current_temperature.trim().parse() {
+        let current_temperature: f32 = match current_temperature.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
 
-        let calc_number_ctof: f64 = my_calc::my_calc::calc_ctof(current_temperature);
+        let calc_number_ctof: f32 = my_calc::my_calc::calc_ctof(current_temperature);
 
         println!("\n
             +----------------------------------+\n
@@ -95,12 +95,12 @@ fn convert_2() {
             .read_line(&mut current_temperature)
             .expect("行の読み込みに失敗しました。");
 
-        let current_temperature: f64 = match current_temperature.trim().parse() {
+        let current_temperature: f32 = match current_temperature.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
 
-        let calc_number_ftoc: f64 = my_calc::my_calc::calc_ftoc(current_temperature);
+        let calc_number_ftoc: f32 = my_calc::my_calc::calc_ftoc(current_temperature);
 
         println!("\n
             +----------------------------------+\n
